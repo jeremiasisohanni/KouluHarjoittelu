@@ -193,8 +193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 178602}
-  horizontalSpeed: 1
-  verticalSpeed: 1
+  horizontalSpeed: 2
+  verticalSpeed: 2
 --- !u!124 &12403358
 Behaviour:
   m_ObjectHideFlags: 1

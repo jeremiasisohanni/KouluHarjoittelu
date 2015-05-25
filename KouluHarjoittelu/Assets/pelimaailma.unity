@@ -109,8 +109,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 253743186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -57.7007675, y: -16.5238037, z: -1.76196289}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1627860968}
   m_Father: {fileID: 0}
@@ -220,15 +220,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 403886, guid: 643c76f3c74512141875ffe32ac582ea, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 403886, guid: 643c76f3c74512141875ffe32ac582ea, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 403886, guid: 643c76f3c74512141875ffe32ac582ea, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 403886, guid: 643c76f3c74512141875ffe32ac582ea, type: 2}
       propertyPath: m_LocalRotation.x
@@ -262,7 +262,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 483968, guid: 46b24e69b7d909943b30c91e707eb824, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 249.199997
+      value: 326.100006
       objectReference: {fileID: 0}
     - target: {fileID: 483968, guid: 46b24e69b7d909943b30c91e707eb824, type: 2}
       propertyPath: m_LocalPosition.y
@@ -291,6 +291,14 @@ Prefab:
     - target: {fileID: 483968, guid: 46b24e69b7d909943b30c91e707eb824, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460090, guid: 46b24e69b7d909943b30c91e707eb824, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -8.42000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 460090, guid: 46b24e69b7d909943b30c91e707eb824, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.71000004
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
