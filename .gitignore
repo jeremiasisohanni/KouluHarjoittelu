@@ -7,7 +7,7 @@ KouluHarjoittelu/Library/
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-KouluHarjoittelu/ExportedObj/
+/ExportedObj/
 obj/
 *.svd
 *.userprefs
