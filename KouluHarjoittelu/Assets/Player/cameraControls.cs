@@ -14,13 +14,13 @@ public class cameraControls : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-			
+		/*	
 		if (Input.GetAxis("Fire2") != 0) {
 			h = horizontalSpeed * Input.GetAxis("Mouse Y");
 			v = verticalSpeed * Input.GetAxis("Mouse X");
 			transform.Translate(v,h,0);
 		}
-			
+			*/
 	}
 
 

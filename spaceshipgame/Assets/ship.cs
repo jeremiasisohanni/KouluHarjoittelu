@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ship : MonoBehaviour {
 
@@ -7,9 +8,11 @@ public class ship : MonoBehaviour {
 	public int speed = 10;
 	float timer = 0f;
 	bool up = false;
+	public int hp;
 	bool down = false;
 	bool right = false;
 	bool left = false;
+	GameObject canvas;
 
 	bool shootside = false;
 	Transform leftGun;
@@ -20,6 +23,7 @@ public class ship : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		leftGun = transform.Find ("left");
 		rightGun = transform.Find ("right");
+		canvas = GameObject.Find ("Canvas/HP");
 	}
 
 	void shoot() {
@@ -61,7 +65,10 @@ public class ship : MonoBehaviour {
 			right = true;
 		} else
 			right = false;
+
+		canvas.GetComponent<Text> ().text = hp.ToString ();
 	}
+	
 
 	void FixedUpdate() {
 
@@ -86,5 +93,9 @@ public class ship : MonoBehaviour {
 		if (left) {
 			rb.AddForce (transform.right * -speed);
 		}
+	}
+
+	void takeDamage(int d){
+		hp -= d;
 	}
 }

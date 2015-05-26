@@ -3,8 +3,8 @@ using System.Collections;
 
 public class controls : MonoBehaviour {
 
-	float speed = 6.0f;
-	float jumpSpeed = 8.0f;
+	public float speed = 6.0f;
+	public float jumpSpeed = 8.0f;
 	float gravity = 20.0f;
 	
 	private Vector3 moveDirection = Vector3.zero;

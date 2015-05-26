@@ -15,7 +15,8 @@ public class bullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		other.gameObject.SendMessageUpwards("takeDamage", damage, SendMessageOptions.DontRequireReceiver);
+		if (other.tag != "Player")
+			other.gameObject.SendMessageUpwards("takeDamage", damage, SendMessageOptions.DontRequireReceiver);
 	}
 
 	// Update is called once per frame
