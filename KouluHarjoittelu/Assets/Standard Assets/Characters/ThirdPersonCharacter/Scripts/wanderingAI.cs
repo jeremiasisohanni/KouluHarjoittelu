@@ -12,8 +12,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public ThirdPersonCharacter character { get; private set; } // the character we are controlling
 		public Transform target; // target to aim for
 
-		public Transform[] targetit;
-		public int timeWait = 5000;
+		public Transform[] targets;
+		public int timeWait;
+		private bool waiting = false;
 
 		private float distance = 0.0f;
 		public float turnSpeedInMelee = 10.0f;
@@ -37,13 +38,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		{
 
 			
-			if (target != null)
+			if (target != null && waiting == false)
 			{	
 				agent.SetDestination(target.position);
 				// use the values to move the character
 				character.Move(agent.desiredVelocity, false, false);
-				checkOnArrive();
-				
+				distance = Vector3.Distance(target.position, transform.position);
+
+				if (distance <= 3) {
+					waiting = true;
+					checkOnArrive();
+					
+				}
 			}
 			else
 			{
@@ -54,17 +60,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		private void checkOnArrive() {
-			distance = Vector3.Distance(target.position, transform.position);
+			StartCoroutine(wait());
+			x = UnityEngine.Random.Range(0,targets.Length);
+			target = targets[x];
 
-			if (distance <= 1) {
-				wait ();
-				x = UnityEngine.Random.Range(0,5);
-				target = targetit[x];
-			}
 		}
 
 		IEnumerator wait() {
+			timeWait = UnityEngine.Random.Range (7, 30);
 			yield return new WaitForSeconds(timeWait);
+			waiting = false;
 		}
 	}
 }
