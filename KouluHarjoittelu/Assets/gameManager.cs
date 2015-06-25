@@ -4,6 +4,7 @@ using System.Collections;
 public class gameManager : MonoBehaviour {
 
 	public uiManager UI;
+	public questManager QUI;
 
 	// Use this for initialization
 	void Start () {
@@ -25,5 +26,13 @@ public class gameManager : MonoBehaviour {
 		}
 
 
+	}
+
+	public void toggleQuestMenu() {
+		if (QUI.GetComponentInChildren<Canvas> ().enabled) {
+			QUI.GetComponentInChildren<Canvas> ().enabled = false;
+		} else {
+			QUI.GetComponentInChildren<Canvas>().enabled = true;
+		}
 	}
 }
