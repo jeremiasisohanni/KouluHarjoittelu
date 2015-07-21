@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">tutorial2</string>
+    <string name="title_activity_starting_screen">startingScreen</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="signIn">Sign In</string>
+    <string name="logInButtonText">Log In</string>
+</resources>
