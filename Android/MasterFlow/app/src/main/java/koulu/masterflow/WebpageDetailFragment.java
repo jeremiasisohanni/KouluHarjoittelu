@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.webkit.WebView;
 
 
 import koulu.masterflow.dummy.DummyContent;
@@ -54,7 +55,7 @@ public class WebpageDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.webpage_detail)).setText(mItem.content);
+            ((WebView) rootView.findViewById(R.id.detail_area)).loadUrl(mItem.url);
         }
 
         return rootView;
